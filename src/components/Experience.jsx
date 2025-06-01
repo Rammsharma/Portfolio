@@ -12,7 +12,7 @@ const Experience = () => {
             HeadhunterSolutions.com Website Development
           </h3>
           <p className="mt-4 text-gray-700 leading-relaxed">
-            HeadhunterSolution.com is a service provider website that connects
+            HeadhunterSolutions.com is a service provider website that connects
             professionals with job opportunities based on their skills. I built
             a responsive, user-friendly website using HTML, CSS, and JavaScript.
             I also integrated the Formbold API for form submissions and
