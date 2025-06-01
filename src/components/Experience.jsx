@@ -25,7 +25,8 @@ const Experience = () => {
               <li>HTML</li>
               <li>CSS</li>
               <li>JavaScript</li>
-              <li>Formbold API</li>
+              <li>Mobile Responsive</li>
+              <li>Form API</li>
             </ul>
           </div>
 
