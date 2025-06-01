@@ -4,8 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects"; // from HEAD
 import Experience from "./components/Experience"; // renamed from Experiance
-import Skills from "./components/Skills"; // from HEAD
-import PortFolio from "./components/PortFolio"; // from origin/main
+import Skills from "./components/Skills"; // from HEAD// from origin/main
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import { Toaster } from "react-hot-toast";
