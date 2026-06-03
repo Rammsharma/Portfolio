@@ -1,34 +1,67 @@
 import React from "react";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa6";
-function Footer() {
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { FaBrain } from "react-icons/fa";
+
+const SOCIAL = [
+  { icon: <FiGithub size={18} />, href: "https://github.com/Rammsharma", label: "GitHub" },
+  { icon: <FiLinkedin size={18} />, href: "https://linkedin.com/in/ramkumar-sharma", label: "LinkedIn" },
+  { icon: <FiMail size={18} />, href: "mailto:ramkumarsha93835@gmail.com", label: "Email" },
+];
+
+export default function Footer() {
   return (
-    <>
-      <hr />
-      <footer className="py-12">
-        <div className="max-w-screen-2xl container mx-auto px-4 md:px-20">
-          <div className=" flex flex-col items-center justify-center">
-            <div className="flex space-x-4">
-              <FaFacebook size={24} />
-              <FaTwitter size={24} />
-              <FaInstagram size={24} />
-              <FaLinkedinIn size={24} />
+    <footer
+      className="py-10 border-t"
+      style={{
+        background: "#020817",
+        borderColor: "rgba(59,130,246,0.1)",
+      }}
+    >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+          {/* Brand */}
+          <div className="flex items-center gap-2">
+            <div
+              className="w-7 h-7 rounded-lg flex items-center justify-center"
+              style={{ background: "linear-gradient(135deg, #3b82f6, #06b6d4)" }}
+            >
+              <FaBrain className="text-white" size={12} />
             </div>
-            <div className="mt-8 border-t border-gray-700 pt-8 flex flex-col items-center">
-              <p className="text-sm">
-                &copy; 2025 Your Company. All rights reserved.
-              </p>
-              <p className="text-sm">Ram Sharma</p>
-            </div>
+            <span className="font-bold text-white text-sm font-mono">
+              ram<span style={{ color: "#60a5fa" }}>.ai</span>
+            </span>
+          </div>
+
+          {/* Copyright */}
+          <p className="text-slate-500 text-sm">
+            &copy; {new Date().getFullYear()} Ramkumar Sharma · AI Engineer
+          </p>
+
+          {/* Social */}
+          <div className="flex items-center gap-3">
+            {SOCIAL.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={s.label}
+                className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-white transition-all hover:-translate-y-0.5"
+                style={{
+                  background: "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                }}
+              >
+                {s.icon}
+              </a>
+            ))}
           </div>
         </div>
-      </footer>
-    </>
+
+        <p className="text-center text-slate-600 text-xs mt-6">
+          Built with React.js + Vite · Deployed on Netlify
+        </p>
+      </div>
+    </footer>
   );
 }
-
-export default Footer;

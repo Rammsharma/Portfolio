@@ -1,36 +1,37 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home";
+import Hero from "./components/Hero";
 import About from "./components/About";
-import Projects from "./components/Projects"; // from HEAD
-import Experience from "./components/Experience"; // renamed from Experiance
-import Skills from "./components/Skills"; // from HEAD// from origin/main
-import Footer from "./components/Footer";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-    <>
-      <div>
-        <Navbar />
-        <Home />
-        <About />
-        <br />
-        <br />
-        <br />
-        <br />
-        <Skills />
-        <br />
-        <Experience />
-        <br />
-        <Projects />
-
-        <Contact />
-        <Footer />
-      </div>
-      <Toaster />
-    </>
+    <div className="min-h-screen" style={{ backgroundColor: '#020817' }}>
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Contact />
+      <Footer />
+      <Toaster
+        position="bottom-right"
+        toastOptions={{
+          style: {
+            background: '#0d1526',
+            color: '#e2e8f0',
+            border: '1px solid rgba(59,130,246,0.3)',
+          },
+        }}
+      />
+    </div>
   );
 }
+
 export default App;
